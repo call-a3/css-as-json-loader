@@ -21,3 +21,5 @@ node_modules
 
 # Compiled library
 lib
+
+*.bak

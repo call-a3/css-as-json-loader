@@ -1,0 +1,33 @@
+a {
+  prop: value;
+  prop2: 2;
+}
+
+a,b {
+  prop1: value;
+  prop2: 'haha';
+  prop3: 0 width;
+}
+
+c[attr="nope"] {
+  prop: value;
+}
+
+@media demo {
+  .class {
+    prop: value;
+  }
+}
+
+
+@keyframes demo-animation {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #fff;
+  }
+}

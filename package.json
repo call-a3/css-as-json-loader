@@ -1,0 +1,43 @@
+{
+  "name": "css-as-json-loader",
+  "version": "0.1.0",
+  "description": "Webpack loader that loads CSS and emits it as JSON (conformant with PostCSS API)",
+  "main": "lib/loader.js",
+  "scripts": {
+    "pretest": "npm run build",
+    "test": "mocha",
+    "build": "babel --presets es2015 -d lib/ src/",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "css",
+    "loader",
+    "js",
+    "webpack"
+  ],
+  "author": "Adriaan Callaerts <adriaan.callaerts@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/call-a3/css-as-json-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/call-a3/css-as-json-loader/issues"
+  },
+  "homepage": "https://github.com/call-a3/css-as-json-loader",
+  "dependencies": {
+    "babel-generator": "^6.3.26",
+    "babel-types": "^6.3.24",
+    "postcss": "^5.0.10"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.4.1",
+    "memory-fs": "^0.3.0",
+    "mocha": "^2.3.4",
+    "webpack": "^1.12.9"
+  }
+}
