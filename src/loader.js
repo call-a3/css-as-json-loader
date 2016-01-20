@@ -13,11 +13,11 @@ module.exports = function(source, map) {
   let loader = this;
   let done   = this.async();
   let file   = this.resourcePath;
-  console.log('file: ' + file);
+  // console.log('file: ' + file);
 
   let original_map = JSON.parse(map.toString());
 
-  console.log(JSON.stringify(original_map, undefined, "  "));
+  // console.log(JSON.stringify(original_map, undefined, "  "));
   let actual_map = new SourceMapConsumer(original_map);
 
   postcss().process(source, {
