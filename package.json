@@ -1,6 +1,6 @@
 {
   "name": "css-as-json-loader",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Webpack loader that loads CSS and emits it as JSON (conformant with PostCSS API)",
   "main": "lib/loader.js",
   "scripts": {

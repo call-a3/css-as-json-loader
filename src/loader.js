@@ -20,7 +20,7 @@ module.exports = function(source, map) {
     map:  {inline:false},
   };
 
-  if (map !== undefined) {
+  if (this.sourceMap) {
     let actual_map = new SourceMapConsumer(JSON.parse(map.toString()));
     opts.map = {
       inline:     false,
