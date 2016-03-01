@@ -14,21 +14,22 @@ module.exports = function(source, map) {
   let done   = this.async();
   let file   = this.resourcePath;
   // console.log('file: ' + file);
-
-  let original_map = JSON.parse(map.toString());
-
-  // console.log(JSON.stringify(original_map, undefined, "  "));
-  let actual_map = new SourceMapConsumer(original_map);
-
-  postcss().process(source, {
+  let opts = {
     from: file,
     to:   file,
-    map:  {
+    map:  {inline:false},
+  };
+
+  if (map !== undefined) {
+    let actual_map = new SourceMapConsumer(JSON.parse(map.toString()));
+    opts.map = {
       inline:     false,
       annotation: false,
-      prev: actual_map
-    }
-  }).then(function(result) {
+      prev: actual_map,
+    };
+  }
+
+  postcss().process(source, opts).then(function(result) {
     result.warnings().forEach(function (msg) {
       loader.emitWarning(msg.toString());
     });
